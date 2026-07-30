@@ -59,8 +59,16 @@ h1{margin:0 0 22px;max-width:20ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,se
 .link a{font-size:var(--md);border-bottom:1px solid var(--rule);padding-bottom:2px}
 .link a:hover{border-color:var(--ink)}
 
-footer{border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
-footer .sp{margin-left:auto}
+footer{border-top:1px solid var(--rule);padding:34px 0 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:28px;align-items:start}
+footer .fcol{display:flex;flex-direction:column;gap:9px}
+footer .fk{margin:0 0 3px;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+footer .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:2px}
+footer .fbrand span{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em;color:var(--ink)}
+footer p.fd{margin:0;font-size:12.5px;line-height:1.6;color:var(--muted);max-width:30ch}
+footer a{font-size:var(--sm);color:var(--muted);width:fit-content}
+footer a:hover{color:var(--ink)}
+footer .fbot{grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid var(--rule-soft);display:flex;color:var(--faint)}
+footer .fbot .sp{margin-left:auto}
 </style>
 </head>
 <body>
@@ -74,6 +82,7 @@ footer .sp{margin-left:auto}
     </svg>
     <span class="wordmark">KLEOS</span>
   </a>
+  <a class="item" href="/">Home</a>
   <a class="item" href="/research">Research</a>
   <a class="item" href="/products">Products</a>
   <a class="item" href="/notes">Notes</a>
@@ -157,8 +166,31 @@ footer .sp{margin-left:auto}
   </section>
 
   <footer>
-    <span class="mono">Kleos Research</span>
-    <span class="sp mono">kleosresearch.xyz/lab</span>
+    <div class="fcol">
+      <div class="fbrand"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3" y="5" width="18" height="3" fill="currentColor"/><rect x="10.5" y="11" width="3" height="3" fill="currentColor"/><rect x="3" y="17" width="18" height="3" fill="currentColor"/></svg><span>KLEOS</span></div>
+      <p class="fd">AI research lab. Agent harnesses, memory across sessions and tools, and what an agent actually costs.</p>
+    </div>
+    <div class="fcol">
+      <p class="fk">Products</p>
+      <a href="https://copilot.kleosresearch.xyz">0xCopilot ↗</a>
+      <a href="https://memory.kleosresearch.xyz">Kaleidoscope ↗</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Lab</p>
+      <a href="/research">Research</a>
+      <a href="/notes">Notes</a>
+      <a href="/lab">About</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Contact</p>
+      <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>
+      <a href="https://github.com/kleos-research">github.com/kleos-research</a>
+      <a href="https://app.virtuals.io/virtuals/113720">Funding ↗</a>
+    </div>
+    <div class="fbot">
+      <span class="mono">© 2026 Kleos Research</span>
+      <span class="sp mono">kleosresearch.xyz/lab</span>
+    </div>
   </footer>
 
 </div>

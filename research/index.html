@@ -58,8 +58,16 @@ h1{margin:0 0 20px;max-width:22ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,se
 .row.soon:hover .row-title{color:var(--ink)}
 .row.soon .badge{text-align:center}
 
-footer{margin-top:56px;border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
-footer .sp{margin-left:auto}
+footer{border-top:1px solid var(--rule);padding:34px 0 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:28px;align-items:start}
+footer .fcol{display:flex;flex-direction:column;gap:9px}
+footer .fk{margin:0 0 3px;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+footer .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:2px}
+footer .fbrand span{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em;color:var(--ink)}
+footer p.fd{margin:0;font-size:12.5px;line-height:1.6;color:var(--muted);max-width:30ch}
+footer a{font-size:var(--sm);color:var(--muted);width:fit-content}
+footer a:hover{color:var(--ink)}
+footer .fbot{grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid var(--rule-soft);display:flex;color:var(--faint)}
+footer .fbot .sp{margin-left:auto}
 </style>
 </head>
 <body>
@@ -73,6 +81,7 @@ footer .sp{margin-left:auto}
     </svg>
     <span class="wordmark">KLEOS</span>
   </a>
+  <a class="item" href="/">Home</a>
   <a class="item on" href="/research">Research</a>
   <a class="item" href="/products">Products</a>
   <a class="item" href="/notes">Notes</a>
@@ -89,17 +98,17 @@ footer .sp{margin-left:auto}
   </section>
 
   <div class="filters">
-    <button class="chip on">All</button>
-    <button class="chip">Papers</button>
-    <button class="chip">Specs</button>
-    <button class="chip">Protocols</button>
-    <span class="n mono">7 items</span>
+    <button class="chip on" data-kind="all">All</button>
+    <button class="chip" data-kind="paper">Papers</button>
+    <button class="chip" data-kind="spec">Specs</button>
+    <button class="chip" data-kind="protocol">Protocols</button>
+    <span class="n mono" data-word=" items">7 items</span>
   </div>
 
   <div class="year"><h2>2026</h2><span class="line"></span></div>
   <div class="rows">
 
-    <div class="row soon">
+    <div class="row soon" data-kind="paper">
       <span class="row-date">—</span>
       <span class="row-title">Kaleidoscope: Benchmarking Continual Agent Memory under Bounded Context and Computation
         <span class="sub">A free-energy contextual controller with attribution-gated replay. Formulates continual agent memory as bounded context compilation over a nonstationary stream, and defines a chronological cross-domain benchmark whose matched-total-cost analysis tests whether accuracy rankings reverse once all resource use is counted.</span>
@@ -107,7 +116,7 @@ footer .sp{margin-left:auto}
       <span class="badge paper">paper<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="protocol">
       <span class="row-date">07</span>
       <span class="row-title">Statistical Analysis and Win Conditions
         <span class="sub">The preregistered analysis plan: what counts as a result, what counts as noninferior, and the novel-task and negative-transfer protections a memory claim has to clear.</span>
@@ -115,7 +124,7 @@ footer .sp{margin-left:auto}
       <span class="badge">protocol<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="protocol">
       <span class="row-date">07</span>
       <span class="row-title">Evaluation Instrumentation
         <span class="sub">The measurement contract. What every run must emit, how tokens and local compute are attributed, and what to record when a harness does not expose a field.</span>
@@ -123,7 +132,7 @@ footer .sp{margin-left:auto}
       <span class="badge">protocol<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="protocol">
       <span class="row-date">07</span>
       <span class="row-title">Benchmark Plan
         <span class="sub">Task construction, chronological workstreams, prefix/suffix boundaries, and the freezing rules that keep a memory benchmark from leaking its own answers.</span>
@@ -131,7 +140,7 @@ footer .sp{margin-left:auto}
       <span class="badge">protocol<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="protocol">
       <span class="row-date">07</span>
       <span class="row-title">Matched-Cost Ablation Program
         <span class="sub">The ablation ladder, run at equal total cost rather than equal task count.</span>
@@ -139,7 +148,7 @@ footer .sp{margin-left:auto}
       <span class="badge">protocol<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="spec">
       <span class="row-date">06</span>
       <span class="row-title">Kaleidoscope normative specifications
         <span class="sub">Filesystem layout and durability, process ABI and lifecycle, request/response and event contracts, trace and fixture formats. The contracts an independent implementation would need.</span>
@@ -147,7 +156,7 @@ footer .sp{margin-left:auto}
       <span class="badge">spec<span class="status">in progress</span></span>
     </div>
 
-    <div class="row soon">
+    <div class="row soon" data-kind="protocol">
       <span class="row-date">06</span>
       <span class="row-title">LargeRepo-Memory: construction and evaluation plan
         <span class="sub">Building a memory-bearing evaluation over a large real repository, and what breaks at that scale.</span>
@@ -158,10 +167,56 @@ footer .sp{margin-left:auto}
   </div>
 
   <footer>
-    <span class="mono">Kleos Research</span>
-    <span class="sp mono">kleosresearch.xyz/research</span>
+    <div class="fcol">
+      <div class="fbrand"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3" y="5" width="18" height="3" fill="currentColor"/><rect x="10.5" y="11" width="3" height="3" fill="currentColor"/><rect x="3" y="17" width="18" height="3" fill="currentColor"/></svg><span>KLEOS</span></div>
+      <p class="fd">AI research lab. Agent harnesses, memory across sessions and tools, and what an agent actually costs.</p>
+    </div>
+    <div class="fcol">
+      <p class="fk">Products</p>
+      <a href="https://copilot.kleosresearch.xyz">0xCopilot ↗</a>
+      <a href="https://memory.kleosresearch.xyz">Kaleidoscope ↗</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Lab</p>
+      <a href="/research">Research</a>
+      <a href="/notes">Notes</a>
+      <a href="/lab">About</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Contact</p>
+      <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>
+      <a href="https://github.com/kleos-research">github.com/kleos-research</a>
+      <a href="https://app.virtuals.io/virtuals/113720">Funding ↗</a>
+    </div>
+    <div class="fbot">
+      <span class="mono">© 2026 Kleos Research</span>
+      <span class="sp mono">kleosresearch.xyz/research</span>
+    </div>
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.chip'),rows=document.querySelectorAll('.rows .row'),
+      n=document.querySelector('.filters .n');
+  function apply(kind){
+    var shown=0;
+    rows.forEach(function(r){
+      var ok = kind==='all' || (r.dataset.kind||'').split(' ').indexOf(kind)>-1;
+      r.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(n) n.textContent = shown + (n.dataset.word||' items');
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('on')});
+      c.classList.add('on');
+      apply(c.dataset.kind||'all');
+    });
+  });
+})();
+</script>
 </body>
 </html>
