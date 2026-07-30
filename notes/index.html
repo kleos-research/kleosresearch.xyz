@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notes — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --xl:26px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted);font-size:var(--sm)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 34px}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 20px;max-width:22ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+
+.filters{display:flex;align-items:center;gap:8px;padding:24px 0 0;border-top:1px solid var(--rule);margin-top:32px}
+.chip{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:7px 11px;cursor:pointer;background:none}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.filters .n{margin-left:auto;color:var(--faint)}
+
+.rows{border-top:1px solid var(--ink);margin-top:32px}
+.row{display:grid;grid-template-columns:74px 1fr 92px;gap:20px;align-items:baseline;padding:17px 0;border-bottom:1px solid var(--rule-soft)}
+.row:hover .row-title{color:#000}
+.row-date{font:400 11px/1.5 'JetBrains Mono',monospace;color:var(--faint)}
+.row-title{font-size:var(--md);line-height:1.44;max-width:58ch}
+.row-title .sub{display:block;margin-top:5px;font-size:12.5px;color:var(--muted);line-height:1.55;max-width:62ch}
+.badge{justify-self:end;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 6px}
+
+.why{margin:40px 0 0;padding:26px 0 0;border-top:1px solid var(--rule);max-width:62ch}
+.why h2{margin:0 0 12px;font:600 var(--sm)/1 Inter,sans-serif}
+.why p{margin:0;font:400 16px/1.66 Newsreader,Georgia,serif;color:var(--muted)}
+
+
+.row.soon{cursor:default}
+.row.soon:hover .row-title{color:var(--ink)}
+.row.soon .badge{text-align:center}
+.status{display:block;margin-top:5px;font:400 9.5px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.05em;text-transform:none}
+footer{margin-top:52px;border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
+footer .sp{margin-left:auto}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item" href="/research">Research</a>
+  <a class="item" href="/products">Products</a>
+  <a class="item on" href="/notes">Notes</a>
+  <a class="item" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">Notes</div>
+    <h1>Decisions, dead ends, and things that only show up once you build it.</h1>
+    <p class="lede">Shorter writing than the papers. Each note argues one point, usually a decision we had to make and the reasoning that survived contact with the implementation.</p>
+  </section>
+
+  <div class="filters">
+    <button class="chip on">All</button>
+    <button class="chip">Method</button>
+    <button class="chip">Retrieval</button>
+    <button class="chip">Storage</button>
+    <button class="chip">Decisions</button>
+    <span class="n mono">9 notes</span>
+  </div>
+
+  <div class="rows">
+
+    <div class="row soon">
+      <span class="row-date">2026.07</span>
+      <span class="row-title">Replay that never calls the model
+        <span class="sub">Learning from past runs normally means re-running them, and re-running an agent means paying for inference twice. Ours replays only the local retrieval and compilation pipeline — the frontier model is never called a second time. Also: why naive TD-error priority spends its budget on irreducible noise, and what recurrence-awareness changes. Teaser for the paper.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.07</span>
+      <span class="row-title">Why the controller starts with an opinion
+        <span class="sub">Given sparse feedback, an unregularized learner overcommits to whatever it happened to see first. A G-learning-derived free-energy policy pulls early plan choices toward a prior via a KL penalty — so the opening behaviour is conservative and, more importantly, <i>inspectable</i>. You can read the prior. For a memory system you are being asked to trust, that matters more than the regret bound. Teaser for the paper.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.07</span>
+      <span class="row-title">Valid time, observation time, transaction time
+        <span class="sub">A memory system needs three clocks, not one. When a fact became true, when we found out, and when we wrote it down — and why conflating any two of them corrupts recall.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.07</span>
+      <span class="row-title">Tantivy versus a custom sparse index
+        <span class="sub">We evaluated using an existing search library against writing our own. What the off-the-shelf option costs you when your documents are agent traces rather than prose.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.06</span>
+      <span class="row-title">Tokenizing code paths, email addresses and spreadsheet formulas
+        <span class="sub">Standard tokenizers destroy exactly the strings this system needs to match on. What we changed and what it cost.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.06</span>
+      <span class="row-title">Event journal framing
+        <span class="sub">The append-only format underneath the store, and why the framing decision constrains everything built on top of it.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.06</span>
+      <span class="row-title">Locking and multiprocess semantics
+        <span class="sub">Four agent harnesses may read the same store at once, and one of them may be writing. What we guarantee and what we refuse to.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.05</span>
+      <span class="row-title">Durability and fsync
+        <span class="sub">How much we are willing to lose on power failure, stated precisely, because "it persists" is not a specification.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">2026.05</span>
+      <span class="row-title">Why the core is Rust
+        <span class="sub">A signed binary that runs beside four other people's tools has constraints a scripting language does not meet. The argument, including what we gave up.</span>
+      </span>
+      <span class="badge">note<span class="status">in progress</span></span>
+    </div>
+
+  </div>
+
+  <section class="why">
+    <h2>Why we publish these</h2>
+    <p>A decision record is more useful than a changelog. The papers say what we set out to prove; the notes say what we actually ran into, including the parts where the first answer was wrong. Both are part of the record.</p>
+  </section>
+
+  <footer>
+    <span class="mono">Kleos Research</span>
+    <span class="sp mono">kleosresearch.xyz/notes</span>
+  </footer>
+
+</div>
+</body>
+</html>

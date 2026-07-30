@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --xl:26px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted);font-size:var(--sm)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 30px}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 20px;max-width:22ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+
+.filters{display:flex;align-items:center;gap:8px;padding:26px 0 0;border-top:1px solid var(--rule);margin-top:34px}
+.chip{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:7px 11px;cursor:pointer;background:none}
+.chip:hover{border-color:var(--ink);color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.filters .n{margin-left:auto;color:var(--faint)}
+
+.year{display:flex;align-items:baseline;gap:14px;margin:38px 0 0;padding-bottom:10px}
+.year h2{margin:0;font:400 var(--xl)/1 Newsreader,Georgia,serif;color:var(--faint);letter-spacing:-.01em}
+.year .line{flex:1;height:1px;background:var(--rule)}
+.rows{border-top:1px solid var(--ink)}
+.row{display:grid;grid-template-columns:74px 1fr 96px;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--rule-soft)}
+.row:hover .row-title{color:#000}
+.row-date{font:400 11px/1.5 'JetBrains Mono',monospace;color:var(--faint)}
+.row-title{font-size:var(--md);line-height:1.44;max-width:58ch}
+.row-title .sub{display:block;margin-top:5px;font-size:12.5px;color:var(--muted);line-height:1.5;max-width:62ch}
+.row-title .fmt{display:inline-flex;gap:8px;margin-top:8px}
+.row-title .fmt span{font:400 10px/1 'JetBrains Mono',monospace;letter-spacing:.06em;color:var(--brass);border:1px solid rgba(138,106,34,.3);border-radius:2px;padding:4px 5px}
+.badge{justify-self:end;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:4px 6px}
+.badge.paper{color:var(--ink);border-color:var(--ink)}
+.status{display:block;margin-top:5px;font:400 9.5px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.05em;text-transform:none}
+.row.soon{cursor:default}
+.row.soon:hover .row-title{color:var(--ink)}
+.row.soon .badge{text-align:center}
+
+footer{margin-top:56px;border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
+footer .sp{margin-left:auto}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item on" href="/research">Research</a>
+  <a class="item" href="/products">Products</a>
+  <a class="item" href="/notes">Notes</a>
+  <a class="item" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">Research</div>
+    <h1>Everything we have published, in the order we learned it.</h1>
+    <p class="lede">Papers, normative specifications and evaluation protocols on agent harnesses, memory, and how to measure what an agent actually costs. Method and instrumentation are published with every result.</p>
+  </section>
+
+  <div class="filters">
+    <button class="chip on">All</button>
+    <button class="chip">Papers</button>
+    <button class="chip">Specs</button>
+    <button class="chip">Protocols</button>
+    <span class="n mono">7 items</span>
+  </div>
+
+  <div class="year"><h2>2026</h2><span class="line"></span></div>
+  <div class="rows">
+
+    <div class="row soon">
+      <span class="row-date">—</span>
+      <span class="row-title">Kaleidoscope: Benchmarking Continual Agent Memory under Bounded Context and Computation
+        <span class="sub">A free-energy contextual controller with attribution-gated replay. Formulates continual agent memory as bounded context compilation over a nonstationary stream, and defines a chronological cross-domain benchmark whose matched-total-cost analysis tests whether accuracy rankings reverse once all resource use is counted.</span>
+      </span>
+      <span class="badge paper">paper<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">07</span>
+      <span class="row-title">Statistical Analysis and Win Conditions
+        <span class="sub">The preregistered analysis plan: what counts as a result, what counts as noninferior, and the novel-task and negative-transfer protections a memory claim has to clear.</span>
+      </span>
+      <span class="badge">protocol<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">07</span>
+      <span class="row-title">Evaluation Instrumentation
+        <span class="sub">The measurement contract. What every run must emit, how tokens and local compute are attributed, and what to record when a harness does not expose a field.</span>
+      </span>
+      <span class="badge">protocol<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">07</span>
+      <span class="row-title">Benchmark Plan
+        <span class="sub">Task construction, chronological workstreams, prefix/suffix boundaries, and the freezing rules that keep a memory benchmark from leaking its own answers.</span>
+      </span>
+      <span class="badge">protocol<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">07</span>
+      <span class="row-title">Matched-Cost Ablation Program
+        <span class="sub">The ablation ladder, run at equal total cost rather than equal task count.</span>
+      </span>
+      <span class="badge">protocol<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">06</span>
+      <span class="row-title">Kaleidoscope normative specifications
+        <span class="sub">Filesystem layout and durability, process ABI and lifecycle, request/response and event contracts, trace and fixture formats. The contracts an independent implementation would need.</span>
+      </span>
+      <span class="badge">spec<span class="status">in progress</span></span>
+    </div>
+
+    <div class="row soon">
+      <span class="row-date">06</span>
+      <span class="row-title">LargeRepo-Memory: construction and evaluation plan
+        <span class="sub">Building a memory-bearing evaluation over a large real repository, and what breaks at that scale.</span>
+      </span>
+      <span class="badge">protocol<span class="status">in progress</span></span>
+    </div>
+
+  </div>
+
+  <footer>
+    <span class="mono">Kleos Research</span>
+    <span class="sp mono">kleosresearch.xyz/research</span>
+  </footer>
+
+</div>
+</body>
+</html>

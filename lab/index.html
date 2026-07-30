@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The lab — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --lg:19px; --xl:26px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+.narrow{max-width:640px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{display:flex;align-items:center;gap:8px;margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 44px;border-bottom:1px solid var(--rule)}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 22px;max-width:20ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0 0 16px;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+
+.section{padding:48px 0}
+.section + .section{border-top:1px solid var(--rule)}
+.sec-head{margin:0 0 26px}
+.sec-head h2{margin:0;font:600 var(--sm)/1 Inter,sans-serif;letter-spacing:.02em}
+
+/* principles */
+.p{display:grid;grid-template-columns:34px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule-soft)}
+.p:first-of-type{border-top:1px solid var(--ink)}
+.p .n{font:400 11px/1.6 'JetBrains Mono',monospace;color:var(--faint)}
+.p h3{margin:0 0 8px;font:400 var(--lg)/1.28 Newsreader,Georgia,serif;letter-spacing:-.008em}
+.p p{margin:0;font-size:var(--sm);line-height:1.66;color:var(--muted);max-width:58ch}
+
+/* prose */
+.prose p{margin:0 0 16px;font:400 var(--read)/1.66 Newsreader,Georgia,serif;color:var(--body)}
+.prose p:last-child{margin-bottom:0}
+
+/* contact */
+.links{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--ink)}
+.link{padding:22px 24px 24px;border-right:1px solid var(--rule)}
+.link:last-child{border-right:none}
+.link .k{margin:0 0 8px;font:500 10.5px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.09em;text-transform:uppercase}
+.link a{font-size:var(--md);border-bottom:1px solid var(--rule);padding-bottom:2px}
+.link a:hover{border-color:var(--ink)}
+
+footer{border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
+footer .sp{margin-left:auto}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item" href="/research">Research</a>
+  <a class="item" href="/products">Products</a>
+  <a class="item" href="/notes">Notes</a>
+  <a class="item on" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">The lab</div>
+    <h1>A research lab that ships what it finds.</h1>
+    <p class="lede">Kleos works on agent harnesses — the layer that decides what a model sees, what it keeps, and what the whole thing costs. We publish the research, and we build the products that come out of it.</p>
+    <p class="lede">The name is Greek: <i>kleos</i>, the account of a thing done, carried forward by whoever witnessed it. It seemed like the right word for a lab whose subject is what survives between sessions.</p>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>How we work</h2></div>
+
+    <div class="p">
+      <span class="n">01</span>
+      <div>
+        <h3>Publish the method, not just the number</h3>
+        <p>Every result ships with the task manifest, the instrumentation contract, and the raw traces. A number without the apparatus that produced it is an advertisement.</p>
+      </div>
+    </div>
+
+    <div class="p">
+      <span class="n">02</span>
+      <div>
+        <h3>Cost is a result, not a footnote</h3>
+        <p>Final-answer accuracy hides the search effort, the compute and the tokens that produced the answer. We rank at matched total cost, because a method that wins on accuracy and loses on everything else has not actually won.</p>
+      </div>
+    </div>
+
+    <div class="p">
+      <span class="n">03</span>
+      <div>
+        <h3>No claim before the experiment</h3>
+        <p>Hypotheses are not achievements. We would rather launch a product with an argument and no numbers than with numbers we cannot reproduce.</p>
+      </div>
+    </div>
+
+    <div class="p">
+      <span class="n">04</span>
+      <div>
+        <h3>Local by default</h3>
+        <p>The evidence a person accumulates about their own work is the most sensitive thing in the system. It stays on their machine unless there is a reason it cannot.</p>
+      </div>
+    </div>
+
+    <div class="p">
+      <span class="n">05</span>
+      <div>
+        <h3>Build inside other people's tools</h3>
+        <p>You cannot study harnesses from the outside. Writing adapters into tools we did not build turned out to be the cheapest way to understand what they actually do.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>What we publish</h2></div>
+    <div class="prose narrow">
+      <p>Three kinds of thing. <b>Papers</b>, where there is a formal result or a full experimental protocol. <b>Specs</b>, where the useful output is a contract other people can implement against. <b>Notes</b>, which are shorter and argue one point.</p>
+      <p>Everything is dated and stays at a stable URL with the year in the path, so a citation made today still resolves in five years. Nothing gets quietly revised — corrections are published as corrections.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2>Elsewhere</h2></div>
+    <div class="links">
+      <div class="link">
+        <p class="k">Code</p>
+        <a href="https://github.com/kleos-research">github.com/kleos-research&nbsp;↗</a>
+      </div>
+      <div class="link">
+        <p class="k">Contact</p>
+        <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="mono">Kleos Research</span>
+    <span class="sp mono">kleosresearch.xyz/lab</span>
+  </footer>
+
+</div>
+</body>
+</html>

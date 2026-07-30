@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Products — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --lg:19px; --xl:28px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted);font-size:var(--sm)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 44px;border-bottom:1px solid var(--rule)}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 20px;max-width:21ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+
+/* product blocks */
+.prod{padding:46px 0;border-bottom:1px solid var(--rule)}
+.prod .top{display:flex;align-items:baseline;gap:14px;margin:0 0 6px}
+.prod h2{margin:0;font:400 var(--xl)/1.14 Newsreader,Georgia,serif;letter-spacing:-.014em}
+.pill{font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;padding:5px 7px}
+.pill.live{color:var(--ink);border:1px solid var(--ink)}
+.pill.dev{color:var(--brass);border:1px solid rgba(138,106,34,.45)}
+.prod .kind{margin:0 0 20px;font:400 10.5px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.07em}
+.prod .desc{margin:0 0 26px;max-width:58ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);margin-bottom:24px}
+.cell{padding:16px 22px 18px 0}
+.cell:nth-child(even){padding-left:22px;border-left:1px solid var(--rule-soft)}
+.cell h3{margin:0 0 7px;font:500 var(--md)/1.2 Inter,sans-serif}
+.cell p{margin:0;font-size:var(--sm);line-height:1.62;color:var(--muted);max-width:38ch}
+
+.facts{display:flex;gap:0;border-top:1px solid var(--rule-soft);border-bottom:1px solid var(--rule-soft);margin-bottom:26px}
+.fact{padding:14px 26px 15px 0}
+.fact + .fact{padding-left:26px;border-left:1px solid var(--rule-soft)}
+.fact .k{margin:0 0 5px;font:500 9.5px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.09em;text-transform:uppercase}
+.fact .v{margin:0;font-size:var(--sm);color:var(--ink)}
+
+.go{font:400 12px/1 'JetBrains Mono',monospace;color:var(--muted);letter-spacing:.02em;border-bottom:1px solid var(--rule);padding-bottom:3px}
+.go:hover{color:var(--ink);border-color:var(--ink)}
+
+.rel{padding:44px 0 0}
+.rel h2{margin:0 0 18px;font:600 var(--sm)/1 Inter,sans-serif}
+.rel p{margin:0 0 14px;max-width:62ch;font:400 16px/1.66 Newsreader,Georgia,serif;color:var(--body)}
+.rel p:last-child{margin-bottom:0}
+
+footer{margin-top:52px;border-top:1px solid var(--rule);padding:22px 0 60px;display:flex;color:var(--faint)}
+footer .sp{margin-left:auto}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item" href="/research">Research</a>
+  <a class="item on" href="/products">Products</a>
+  <a class="item" href="/notes">Notes</a>
+  <a class="item" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">Products</div>
+    <h1>Two things, built on the same research.</h1>
+    <p class="lede">An agent that does the work, and the memory layer underneath it. They are useful separately and they are designed to compose.</p>
+  </section>
+
+  <!-- 0xCopilot -->
+  <section class="prod">
+    <div class="top">
+      <h2>0xCopilot</h2>
+      <span class="pill live">Available</span>
+    </div>
+    <p class="kind">desktop agent · open source · macOS &amp; Windows</p>
+    <p class="desc">A local-first desktop agent. Give it an outcome and it plans the work, moves through your files and connected tools, and stops for your approval before anything important leaves the building.</p>
+
+    <div class="grid">
+      <div class="cell"><h3>Runs where your work is</h3><p>Files, spreadsheets, connected services. Not a chat box that hands you instructions to carry out yourself.</p></div>
+      <div class="cell"><h3>Approval gates</h3><p>Anything consequential stops and waits. You see the action before it happens, not after.</p></div>
+      <div class="cell"><h3>Replayable runs</h3><p>Every run is a record you can re-open, inspect step by step, and hand to someone else.</p></div>
+      <div class="cell"><h3>Your keys, your machine</h3><p>Bring your own provider key. Nothing is routed through us.</p></div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><p class="k">Source</p><p class="v">Open</p></div>
+      <div class="fact"><p class="k">Keys</p><p class="v">BYOK</p></div>
+      <div class="fact"><p class="k">Platforms</p><p class="v">macOS · Windows</p></div>
+    </div>
+
+    <a class="go" href="https://copilot.kleosresearch.xyz">copilot.kleosresearch.xyz&nbsp;↗</a>
+  </section>
+
+  <!-- Kaleidoscope -->
+  <section class="prod">
+    <div class="top">
+      <h2>Kaleidoscope</h2>
+      <span class="pill dev">In development</span>
+    </div>
+    <p class="kind">memory system · signed native binary · macOS first</p>
+    <p class="desc">Scattered fragments of work, composed into one bounded view an agent can be handed. A decision you make in one tool is invisible to the next one — Kaleidoscope is the store that sits underneath all of them.</p>
+
+    <div class="grid">
+      <div class="cell"><h3>Local</h3><p>The evidence store never leaves the machine. It is the most sensitive thing in the system.</p></div>
+      <div class="cell"><h3>Harness-neutral</h3><p>One store, read by whichever agent you happen to open. Adapters rather than lock-in.</p></div>
+      <div class="cell"><h3>Bounded</h3><p>The compiler chooses what to carry forward before the model is called, and records why.</p></div>
+      <div class="cell"><h3>Inspectable</h3><p>A memory you cannot audit is a memory you cannot trust. You can see exactly what was carried.</p></div>
+    </div>
+
+    <div class="facts">
+      <div class="fact"><p class="k">Source</p><p class="v">Proprietary · signed</p></div>
+      <div class="fact"><p class="k">Planned adapters</p><p class="v">0xCopilot · Claude Code · Codex · Cursor</p></div>
+      <div class="fact"><p class="k">Status</p><p class="v">Not yet released</p></div>
+    </div>
+
+    <a class="go" href="https://memory.kleosresearch.xyz">memory.kleosresearch.xyz&nbsp;↗</a>
+  </section>
+
+  <section class="rel">
+    <h2>How they fit together</h2>
+    <p>0xCopilot is an agent. Kaleidoscope is what an agent remembers. You can run the agent without the memory layer, and you can point the memory layer at an agent we did not build — that is the whole reason it is harness-neutral rather than a feature.</p>
+    <p>Keeping them separate is a research position as much as a product one. If memory only ever ran inside our own agent, we could not measure whether it helps, because we would have nothing to compare it against.</p>
+  </section>
+
+  <footer>
+    <span class="mono">Kleos Research</span>
+    <span class="sp mono">kleosresearch.xyz/products</span>
+  </footer>
+
+</div>
+</body>
+</html>
