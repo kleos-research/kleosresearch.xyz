@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="virtual-protocol-site-verification" content="92f94892b6d9f37d2e569bdf6ffd46b1" />
+<title>Privacy — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --lg:19px; --xl:26px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted);font-size:var(--sm)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 40px;border-bottom:1px solid var(--rule)}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 20px;max-width:20ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+.updated{margin:18px 0 0;font:400 11px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.05em}
+
+.doc{padding:44px 0 0;max-width:660px}
+.doc h2{margin:38px 0 14px;font:600 var(--sm)/1 Inter,sans-serif;letter-spacing:.02em}
+.doc h2:first-child{margin-top:0}
+.doc p{margin:0 0 15px;font:400 16px/1.68 Newsreader,Georgia,serif;color:var(--body)}
+.doc ul{margin:0 0 15px;padding-left:20px}
+.doc li{margin:0 0 9px;font:400 16px/1.66 Newsreader,Georgia,serif;color:var(--body)}
+.doc a.ln{border-bottom:1px solid var(--rule)}
+.doc a.ln:hover{border-color:var(--ink)}
+.doc code{font:400 13px/1 'JetBrains Mono',monospace;background:var(--raised);padding:2px 5px;border-radius:2px}
+.callout{margin:26px 0;padding:20px 22px;background:var(--raised);border-left:2px solid var(--brass);font-size:14px;line-height:1.68;color:var(--muted)}
+.callout b{color:var(--ink);font-weight:500}
+
+footer{border-top:1px solid var(--rule);padding:34px 0 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:28px;align-items:start;margin-top:56px}
+footer .fcol{display:flex;flex-direction:column;gap:9px}
+footer .fk{margin:0 0 3px;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+footer .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:2px}
+footer .fbrand span{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em;color:var(--ink)}
+footer p.fd{margin:0;font-size:12.5px;line-height:1.6;color:var(--muted);max-width:30ch}
+footer a{font-size:var(--sm);color:var(--muted);width:fit-content}
+footer a:hover{color:var(--ink)}
+footer .fbot{grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid var(--rule-soft);display:flex;gap:18px;color:var(--faint)}
+footer .fbot .sp{margin-left:auto}
+
+@media (max-width:900px){
+  .wrap{padding:0 26px}
+  footer{grid-template-columns:1fr 1fr;gap:24px}
+  h1,.lede,.doc{max-width:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  h1{font-size:27px;line-height:1.14}
+  .lede{font-size:16px}
+  nav{height:auto;flex-wrap:wrap;padding:13px 0;gap:11px 16px}
+  .brand{flex:0 0 100%;margin-right:0}
+  nav a.fund{margin-left:0;padding-left:0;border-left:none}
+  footer{grid-template-columns:1fr;gap:22px;padding-top:28px}
+}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item" href="/">Home</a>
+  <a class="item" href="/research">Research</a>
+  <a class="item" href="/products">Products</a>
+  <a class="item" href="/notes">Notes</a>
+  <a class="item" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">Privacy</div>
+    <h1>We collect nothing on this website.</h1>
+    <p class="lede">This is a static site. There are no accounts, no forms, no cookies, no analytics and no tracking of any kind. This page describes the little that does happen, and what our products do differently.</p>
+    <p class="updated">Last updated 4 August 2026</p>
+  </section>
+
+  <div class="doc">
+
+    <h2>What this site does not do</h2>
+    <p>kleosresearch.xyz is a set of static HTML pages. It does not set cookies, does not use local storage, contains no forms and no login, and runs no analytics, advertising, fingerprinting or session-recording scripts. We do not build profiles of visitors, and we have no visitor data to sell, share or lose.</p>
+
+    <h2>What does happen</h2>
+    <p><b>Hosting.</b> The site is served by GitHub Pages. Like any web host, GitHub processes the network requests needed to deliver pages and may log IP addresses for security and abuse prevention. That processing is governed by <a class="ln" href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub's privacy statement</a>, not by us. We do not receive those logs and have no access to them.</p>
+    <p><b>Fonts.</b> Pages load the Newsreader, Inter and JetBrains Mono typefaces from Google Fonts. Your browser therefore makes a request to <code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>, which discloses your IP address and user-agent to Google. We receive nothing from this, but it is a third-party request and you should know it occurs. We intend to self-host these fonts so that the site makes no third-party requests at all.</p>
+    <p><b>Links out.</b> Pages link to GitHub, Virtuals and our own subdomains. Following a link takes you to a service with its own privacy practices, which we do not control.</p>
+
+    <h2>Email</h2>
+    <p>If you write to <a class="ln" href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>, we receive your message, your address and anything else you choose to include. Mail is handled by Google Workspace. We keep correspondence only as long as it is useful to answer you or to maintain a record of a discussion, and we do not add correspondents to any mailing list.</p>
+
+    <h2>Our products are separate — and local by design</h2>
+    <p>This policy covers the website. Our products have their own, stronger position, because privacy is an architectural decision for us rather than a legal one:</p>
+    <ul>
+      <li><b>0xCopilot</b> is a local-first desktop agent. It runs on your machine and uses your own provider key. We do not route your prompts, files or credentials through our servers.</li>
+      <li><b>Kaleidoscope</b> is a local memory system. The evidence store stays on your machine. It is the most sensitive material in the system and it is not designed to leave your disk.</li>
+    </ul>
+    <p>Where a product connects to a third party at your instruction — a model provider, or a tool you connect — data goes to that party under its terms, and the product is built to make that visible rather than implicit.</p>
+
+    <h2>Your rights</h2>
+    <p>Because we hold no visitor data, most access and deletion requests have nothing to act on. If you have emailed us and want that correspondence deleted, write to <a class="ln" href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a> and we will delete it. If you are in a jurisdiction granting you statutory data rights, you may exercise them at the same address.</p>
+
+    <h2>Children</h2>
+    <p>This site is not directed at children and we knowingly collect no information from anyone.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes we will update the date above. Because the site collects nothing, we do not expect material change unless we add a feature that does — and we would say so plainly here before shipping it.</p>
+
+    <div class="callout"><b>Plain summary.</b> No cookies. No analytics. No accounts. No data collected. Your browser fetches fonts from Google, and our host logs requests for security. That is the whole story.</div>
+
+  </div>
+
+  <footer>
+    <div class="fcol">
+      <div class="fbrand"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3" y="5" width="18" height="3" fill="currentColor"/><rect x="10.5" y="11" width="3" height="3" fill="currentColor"/><rect x="3" y="17" width="18" height="3" fill="currentColor"/></svg><span>KLEOS</span></div>
+      <p class="fd">AI research lab. Agent harnesses, memory across sessions and tools, and what an agent actually costs.</p>
+    </div>
+    <div class="fcol">
+      <p class="fk">Products</p>
+      <a href="https://copilot.kleosresearch.xyz">0xCopilot ↗</a>
+      <a href="https://memory.kleosresearch.xyz">Kaleidoscope ↗</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Lab</p>
+      <a href="/research">Research</a>
+      <a href="/notes">Notes</a>
+      <a href="/lab">About</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Contact</p>
+      <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>
+      <a href="https://github.com/kleos-research">github.com/kleos-research</a>
+      <a href="https://app.virtuals.io/virtuals/113720">Funding ↗</a>
+    </div>
+    <div class="fbot">
+      <span class="mono">© 2026 Kleos Research</span>
+      <a class="mono" href="/privacy">Privacy</a>
+      <a class="mono" href="/terms">Terms</a>
+      <span class="sp mono">kleosresearch.xyz/privacy</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="virtual-protocol-site-verification" content="92f94892b6d9f37d2e569bdf6ffd46b1" />
+<title>Terms — Kleos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F2EC; --raised:#EAE7E0; --rule:#D8D4C9; --rule-soft:#E2DED3;
+  --ink:#141310; --body:#3A382F; --muted:#6A675F; --faint:#8F8B80; --brass:#8A6A22;
+  --sm:13px; --read:17px; --md:15px; --lg:19px; --xl:26px; --x3l:38px; --mono:9.5px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 var(--sm)/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 40px}
+a{color:inherit;text-decoration:none}
+.mono{font:500 var(--mono)/1 'JetBrains Mono',ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase}
+
+header{border-bottom:1px solid var(--rule)}
+nav{display:flex;align-items:center;gap:28px;height:58px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto}
+.brand .wordmark{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em}
+nav a.item{font-size:var(--sm);color:var(--muted)}
+nav a.item:hover,nav a.item.on{color:var(--ink)}
+nav a.fund{margin-left:6px;padding-left:22px;border-left:1px solid var(--rule);color:var(--muted);font-size:var(--sm)}
+nav a.fund:hover{color:var(--ink)}
+
+.head{padding:62px 0 40px;border-bottom:1px solid var(--rule)}
+.eyebrow{color:var(--faint);margin:0 0 22px}
+h1{margin:0 0 20px;max-width:20ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,serif;letter-spacing:-.02em}
+.lede{margin:0;max-width:60ch;font:400 var(--read)/1.62 Newsreader,Georgia,serif;color:var(--body)}
+.updated{margin:18px 0 0;font:400 11px/1 'JetBrains Mono',monospace;color:var(--faint);letter-spacing:.05em}
+
+.doc{padding:44px 0 0;max-width:660px}
+.doc h2{margin:38px 0 14px;font:600 var(--sm)/1 Inter,sans-serif;letter-spacing:.02em}
+.doc h2:first-child{margin-top:0}
+.doc p{margin:0 0 15px;font:400 16px/1.68 Newsreader,Georgia,serif;color:var(--body)}
+.doc ul{margin:0 0 15px;padding-left:20px}
+.doc li{margin:0 0 9px;font:400 16px/1.66 Newsreader,Georgia,serif;color:var(--body)}
+.doc a.ln{border-bottom:1px solid var(--rule)}
+.doc a.ln:hover{border-color:var(--ink)}
+.callout{margin:26px 0;padding:20px 22px;background:var(--raised);border-left:2px solid var(--brass);font-size:14px;line-height:1.68;color:var(--muted)}
+.callout b{color:var(--ink);font-weight:500}
+
+footer{border-top:1px solid var(--rule);padding:34px 0 60px;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:28px;align-items:start;margin-top:56px}
+footer .fcol{display:flex;flex-direction:column;gap:9px}
+footer .fk{margin:0 0 3px;font:500 9.5px/1 'JetBrains Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--faint)}
+footer .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:2px}
+footer .fbrand span{font:600 13px/1 Inter,sans-serif;letter-spacing:.055em;color:var(--ink)}
+footer p.fd{margin:0;font-size:12.5px;line-height:1.6;color:var(--muted);max-width:30ch}
+footer a{font-size:var(--sm);color:var(--muted);width:fit-content}
+footer a:hover{color:var(--ink)}
+footer .fbot{grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid var(--rule-soft);display:flex;gap:18px;color:var(--faint)}
+footer .fbot .sp{margin-left:auto}
+
+@media (max-width:900px){
+  .wrap{padding:0 26px}
+  footer{grid-template-columns:1fr 1fr;gap:24px}
+  h1,.lede,.doc{max-width:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px}
+  h1{font-size:27px;line-height:1.14}
+  .lede{font-size:16px}
+  nav{height:auto;flex-wrap:wrap;padding:13px 0;gap:11px 16px}
+  .brand{flex:0 0 100%;margin-right:0}
+  nav a.fund{margin-left:0;padding-left:0;border-left:none}
+  footer{grid-template-columns:1fr;gap:22px;padding-top:28px}
+}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="3" fill="currentColor"/>
+      <rect x="10.5" y="11" width="3" height="3" fill="currentColor"/>
+      <rect x="3" y="17" width="18" height="3" fill="currentColor"/>
+    </svg>
+    <span class="wordmark">KLEOS</span>
+  </a>
+  <a class="item" href="/">Home</a>
+  <a class="item" href="/research">Research</a>
+  <a class="item" href="/products">Products</a>
+  <a class="item" href="/notes">Notes</a>
+  <a class="item" href="/lab">Lab</a>
+  <a class="fund" href="https://app.virtuals.io/virtuals/113720" target="_blank" rel="noopener">Funding ↗</a>
+</nav></div></header>
+
+<div class="wrap">
+
+  <section class="head">
+    <div class="eyebrow mono">Terms of service</div>
+    <h1>Terms for this website and what we publish on it.</h1>
+    <p class="lede">Short, because this site is a research publication and a set of links. Our software and our token are governed separately, and this page says where.</p>
+    <p class="updated">Last updated 4 August 2026</p>
+  </section>
+
+  <div class="doc">
+
+    <h2>1. Scope</h2>
+    <p>These terms cover your use of kleosresearch.xyz and the material published on it. They do not govern our software, which is licensed separately, and they do not govern any token. Those are addressed in sections 4 and 5.</p>
+
+    <h2>2. Use of the site</h2>
+    <p>You may read, quote, link to and share what we publish here. When you quote research, attribute it and link back to the original page so a reader can check the source. Do not misrepresent our work, present our findings as your own, or attribute to us a claim we did not make.</p>
+    <p>Do not attempt to disrupt the site, and do not use automated means to place unreasonable load on it. Reading it with a script is fine; hammering it is not.</p>
+
+    <h2>3. Research content is published as-is</h2>
+    <p>Everything on this site is research output. It may be preliminary, it may be revised, and it may be wrong. Papers, specifications and notes are published so they can be examined and criticised, not as guarantees of any result.</p>
+    <p>In particular: where our work states that empirical results are not yet available, that statement is accurate and load-bearing. Nothing here should be read as a claim of measured performance, efficiency or benchmark outcome unless it is explicitly presented as a completed result with its method attached. Do not rely on our research as professional, technical, financial or legal advice.</p>
+
+    <h2>4. Software</h2>
+    <p>Our software is not licensed by this page:</p>
+    <ul>
+      <li><b>0xCopilot</b> is open source and governed by the licence distributed with it.</li>
+      <li><b>Kaleidoscope</b> is proprietary and, when released, will be governed by the licence supplied with it.</li>
+    </ul>
+    <p>Where a product connects to third-party services at your instruction — model providers, connected tools — your use of those services is governed by their terms, not ours.</p>
+
+    <h2>5. Tokens</h2>
+    <div class="callout"><b>Nothing on this site is an offer, solicitation, or investment advice, and nothing here is a promise about the value or future utility of any token.</b> Any token related to our work is governed by its own terms and by the platform on which it exists — not by this page. Digital assets carry risk, including total loss. Do your own research and seek qualified advice before acquiring anything.</div>
+    <p>Where we describe token-linked access to a product, we are describing an intended access mechanism for software, not offering a financial instrument and not making a representation about value.</p>
+
+    <h2>6. Intellectual property</h2>
+    <p>The text, design, marks and published research on this site belong to Kleos Research unless stated otherwise. Quotation and citation are welcome under section 2. Wholesale republication, or use of our name and marks in a way that implies endorsement or partnership, is not.</p>
+
+    <h2>7. Third-party links</h2>
+    <p>We link to GitHub, Virtuals and other services. We do not control them and are not responsible for their content, terms or availability.</p>
+
+    <h2>8. No warranty</h2>
+    <p>The site and its contents are provided "as is" and "as available", without warranties of any kind, express or implied, including fitness for a particular purpose and non-infringement. We do not warrant that the site will be uninterrupted, error-free, or that anything published on it is accurate or complete.</p>
+
+    <h2>9. Limitation of liability</h2>
+    <p>To the fullest extent permitted by law, Kleos Research is not liable for any indirect, incidental, special, consequential or exemplary loss arising from your use of this site or reliance on anything published here, including lost profits, lost data or business interruption. Nothing in these terms excludes liability that cannot lawfully be excluded.</p>
+
+    <h2>10. Changes</h2>
+    <p>We may update these terms. The date above records the current version. Continuing to use the site after a change means you accept the revised terms.</p>
+
+    <h2>11. Governing law</h2>
+    <p>Kleos Research is finalising its corporate domicile. Until that is settled and this section is completed, these terms are offered in good faith and no specific forum or governing law is asserted. Nothing in this section limits any mandatory statutory rights you have where you live.</p>
+
+    <h2>12. Contact</h2>
+    <p>Questions about these terms: <a class="ln" href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>.</p>
+
+  </div>
+
+  <footer>
+    <div class="fcol">
+      <div class="fbrand"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><rect x="3" y="5" width="18" height="3" fill="currentColor"/><rect x="10.5" y="11" width="3" height="3" fill="currentColor"/><rect x="3" y="17" width="18" height="3" fill="currentColor"/></svg><span>KLEOS</span></div>
+      <p class="fd">AI research lab. Agent harnesses, memory across sessions and tools, and what an agent actually costs.</p>
+    </div>
+    <div class="fcol">
+      <p class="fk">Products</p>
+      <a href="https://copilot.kleosresearch.xyz">0xCopilot ↗</a>
+      <a href="https://memory.kleosresearch.xyz">Kaleidoscope ↗</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Lab</p>
+      <a href="/research">Research</a>
+      <a href="/notes">Notes</a>
+      <a href="/lab">About</a>
+    </div>
+    <div class="fcol">
+      <p class="fk">Contact</p>
+      <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a>
+      <a href="https://github.com/kleos-research">github.com/kleos-research</a>
+      <a href="https://app.virtuals.io/virtuals/113720">Funding ↗</a>
+    </div>
+    <div class="fbot">
+      <span class="mono">© 2026 Kleos Research</span>
+      <a class="mono" href="/privacy">Privacy</a>
+      <a class="mono" href="/terms">Terms</a>
+      <span class="sp mono">kleosresearch.xyz/terms</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
