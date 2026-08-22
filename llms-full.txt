@@ -1,0 +1,41 @@
+# Kleos Research — expanded context
+
+Kleos Research is an AI research lab. Its work focuses on the harness layer between a person and a model: what enters context, what persists across sessions and tools, and the total cost of completing useful work.
+
+## Kaleidoscope
+
+Kaleidoscope is local memory for AI agents. It preserves accepted decisions, preferences, constraints, corrections, procedures, relationships, and outcomes across harnesses without moving the memory algorithm into public SDK code.
+
+The developer surface consists of:
+
+- a `kaleidoscope` manager CLI for initialization, profiles, configuration, connection, account, and diagnostics;
+- a `kscope` native CLI and persistent stdio MCP server;
+- exactly two model-facing MCP tools: `search` and `remember`;
+- a Python package named `kaleidoscope-memory`;
+- an npm package named `@kleos-research/kaleidoscope`; and
+- integrations for Codex, Claude Code and SDK, Cursor, OpenCode, LangChain, LangGraph, OpenAI Agents SDK, CrewAI, and generic MCP clients.
+
+The public Python and TypeScript packages contain the language clients and command launchers. Platform-specific companion packages contain the public manager and proprietary engine as source-free native object code. The initial release candidate has been exercised on macOS arm64 only.
+
+The package and website candidates are staged but not published. Production package signing, licensing, registry publication, login deployment, and website promotion remain protected release actions.
+
+Canonical developer resources:
+
+- Getting started: https://memory.kleosresearch.xyz/docs/getting-started/
+- Packages: https://memory.kleosresearch.xyz/docs/packages/
+- CLI reference: https://memory.kleosresearch.xyz/docs/cli/
+- MCP reference: https://memory.kleosresearch.xyz/docs/mcp/
+- Integrations: https://memory.kleosresearch.xyz/docs/integrations/
+- Security: https://memory.kleosresearch.xyz/docs/security/
+- Privacy: https://memory.kleosresearch.xyz/docs/privacy/
+- Agent index: https://memory.kleosresearch.xyz/llms.txt
+- Full agent context: https://memory.kleosresearch.xyz/llms-full.txt
+- Documentation source: https://github.com/kleos-research/kaleidoscope-docs
+
+## 0xCopilot
+
+0xCopilot is a local-first desktop agent. It plans work across files and connected tools and pauses for approval before consequential external actions. Product information is at https://copilot.kleosresearch.xyz/.
+
+## Research and organization
+
+Kleos publishes papers, reports, specifications, protocols, and notes at https://kleosresearch.xyz/research/. Organization repositories are at https://github.com/kleos-research. Contact: contact@kleosresearch.xyz.

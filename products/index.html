@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="virtual-protocol-site-verification" content="92f94892b6d9f37d2e569bdf6ffd46b1" />
 <title>Products — Kleos</title>
+<meta name="description" content="Kleos products: 0xCopilot and Kaleidoscope, local memory for AI agents through CLI, MCP, Python, and TypeScript.">
+<link rel="canonical" href="https://kleosresearch.xyz/products/">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="Kleos Research for language models">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Products — Kleos">
+<meta property="og:description" content="0xCopilot is the agent. Kaleidoscope is the local memory layer agents share.">
+<meta property="og:url" content="https://kleosresearch.xyz/products/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32">
@@ -78,6 +85,13 @@ h1{margin:0 0 20px;max-width:21ch;font:400 var(--x3l)/1.08 Newsreader,Georgia,se
 .go{font:400 12px/1 'JetBrains Mono',monospace;color:var(--muted);letter-spacing:.02em;border-bottom:1px solid var(--rule);padding-bottom:3px}
 .go:hover{color:var(--ink);border-color:var(--ink)}
 
+.quickstart{margin:2px 0 26px;padding:20px 22px;background:var(--raised);border:1px solid var(--rule);border-radius:3px}
+.quickstart h3{margin:0 0 8px;font:500 var(--md)/1.2 Inter,sans-serif}
+.quickstart p{margin:0 0 15px;font-size:var(--sm);line-height:1.6;color:var(--muted);max-width:62ch}
+.commands{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.command{display:block;overflow-x:auto;padding:11px 12px;background:var(--ink);color:var(--bg);font:400 11px/1.45 'JetBrains Mono',monospace;white-space:nowrap;border-radius:2px}
+.actions{display:flex;flex-wrap:wrap;gap:16px}
+
 .rel{padding:44px 0 0}
 .rel h2{margin:0 0 18px;font:600 var(--sm)/1 Inter,sans-serif}
 .rel p{margin:0 0 14px;max-width:62ch;font:400 16px/1.66 Newsreader,Georgia,serif;color:var(--body)}
@@ -128,6 +142,7 @@ footer .fbot .sp{margin-left:auto}
   .facts{flex-wrap:wrap}
   .fact+.fact{padding-left:0;border-left:none}
   .adapters{grid-template-columns:1fr 1fr}
+  .commands{grid-template-columns:1fr}
   .actions{flex-wrap:wrap;gap:12px}
   .strip .inner{height:auto;padding:10px 0;flex-wrap:wrap;gap:5px 10px}
   .strip .d{flex-basis:100%}
@@ -170,7 +185,7 @@ footer .fbot .sp{margin-left:auto}
       </a>
       <a class="pcard" href="https://memory.kleosresearch.xyz">
         <span class="pc-n">Kaleidoscope</span>
-        <span class="pc-d">The memory layer underneath it. In development.</span>
+        <span class="pc-d">Local memory for agents through CLI, MCP, Python, and TypeScript.</span>
         <span class="pc-g">memory.kleosresearch.xyz ↗</span>
       </a>
     </div>
@@ -205,25 +220,42 @@ footer .fbot .sp{margin-left:auto}
   <section class="prod">
     <div class="top">
       <h2><a class="pname" href="https://memory.kleosresearch.xyz">Kaleidoscope&nbsp;<span class="arw">↗</span></a></h2>
-      <span class="pill dev">In development</span>
+      <span class="pill dev">Release candidate</span>
     </div>
-    <p class="kind">memory system · signed native binary · macOS first</p>
-    <p class="desc">Scattered fragments of work, composed into one bounded view an agent can be handed. A decision you make in one tool is invisible to the next one — Kaleidoscope is the store that sits underneath all of them.</p>
+    <p class="kind">local agent memory · CLI + MCP · macOS arm64 candidate</p>
+    <p class="desc">One local memory that coding agents and application frameworks can share. Kaleidoscope exposes a developer-friendly CLI, a two-tool stdio MCP server, and Python and TypeScript clients while its proprietary engine remains a source-free native binary on your machine.</p>
 
     <div class="grid">
-      <div class="cell"><h3>Local</h3><p>The evidence store never leaves the machine. It is the most sensitive thing in the system.</p></div>
-      <div class="cell"><h3>Harness-neutral</h3><p>One store, read by whichever agent you happen to open. Adapters rather than lock-in.</p></div>
-      <div class="cell"><h3>Bounded</h3><p>The compiler chooses what to carry forward before the model is called, and records why.</p></div>
-      <div class="cell"><h3>Inspectable</h3><p>A memory you cannot audit is a memory you cannot trust. You can see exactly what was carried.</p></div>
+      <div class="cell"><h3>One memory across tools</h3><p>Codex, Claude Code, Cursor, OpenCode, and application frameworks use the same local profile.</p></div>
+      <div class="cell"><h3>Built for developers</h3><p>Start with the CLI or use the Python and TypeScript clients in LangGraph, OpenAI Agents SDK, CrewAI, and other MCP hosts.</p></div>
+      <div class="cell"><h3>Local native runtime</h3><p>The manager and proprietary memory engine ship as source-free platform binaries. The memory algorithm is not copied into the SDK.</p></div>
+      <div class="cell"><h3>Small agent contract</h3><p>Agents receive exactly two MCP tools: <code>search</code> and <code>remember</code>. Account and operator work stays outside the model-facing surface.</p></div>
     </div>
 
     <div class="facts">
-      <div class="fact"><p class="k">Source</p><p class="v">Proprietary · signed</p></div>
-      <div class="fact"><p class="k">Planned adapters</p><p class="v">0xCopilot · Claude Code · Codex · Cursor</p></div>
-      <div class="fact"><p class="k">Status</p><p class="v">Not yet released</p></div>
+      <div class="fact"><p class="k">Interfaces</p><p class="v">CLI · MCP · Python · TypeScript</p></div>
+      <div class="fact"><p class="k">Native candidate</p><p class="v">macOS arm64</p></div>
+      <div class="fact"><p class="k">Status</p><p class="v">Protected RC · not published</p></div>
     </div>
 
-    <a class="go" href="https://memory.kleosresearch.xyz">memory.kleosresearch.xyz&nbsp;↗</a>
+    <div class="quickstart">
+      <h3>Developer quickstart</h3>
+      <p>These are the final package names for the protected release. The registries remain closed until signing, licensing, and publication are approved.</p>
+      <div class="commands">
+        <code class="command">npm install -g @kleos-research/kaleidoscope@0.1.0-rc.1</code>
+        <code class="command">python -m pip install kaleidoscope-memory==0.1.0rc1</code>
+      </div>
+      <div class="actions">
+        <a class="go" href="https://memory.kleosresearch.xyz/docs/getting-started/">Getting started&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/docs/integrations/">Integrations&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/docs/packages/">Packages&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/docs/cli/">CLI&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/docs/mcp/">MCP&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/llms.txt">llms.txt&nbsp;↗</a>
+        <a class="go" href="https://memory.kleosresearch.xyz/llms-full.txt">llms-full.txt&nbsp;↗</a>
+        <a class="go" href="https://github.com/kleos-research/kaleidoscope-docs">LLM-friendly docs&nbsp;↗</a>
+      </div>
+    </div>
   </section>
 
   <section class="rel">
