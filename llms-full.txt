@@ -17,7 +17,7 @@ The developer surface consists of:
 
 The public Python and TypeScript packages contain the language clients and command launchers. Platform-specific companion packages contain the public manager and proprietary engine as source-free native object code. The initial release candidate has been exercised on macOS arm64 only.
 
-The package and website candidates are staged but not published. Production package signing, licensing, registry publication, login deployment, and website promotion remain protected release actions.
+The public website and documentation preview are live. The package candidates are not published: trusted signing, final EULA/legal review, registry publication, and production login deployment remain deferred release actions.
 
 Canonical developer resources:
 
@@ -28,6 +28,7 @@ Canonical developer resources:
 - Integrations: https://memory.kleosresearch.xyz/docs/integrations/
 - Security: https://memory.kleosresearch.xyz/docs/security/
 - Privacy: https://memory.kleosresearch.xyz/docs/privacy/
+- Licenses and terms: https://memory.kleosresearch.xyz/docs/legal/
 - Agent index: https://memory.kleosresearch.xyz/llms.txt
 - Full agent context: https://memory.kleosresearch.xyz/llms-full.txt
 - Documentation source: https://github.com/kleos-research/kaleidoscope-docs

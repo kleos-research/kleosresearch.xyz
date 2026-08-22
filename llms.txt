@@ -8,6 +8,7 @@
 - [Kaleidoscope getting started](https://memory.kleosresearch.xyz/docs/getting-started/): Install and initialize the protected release packages.
 - [Kaleidoscope integrations](https://memory.kleosresearch.xyz/docs/integrations/): Codex, Claude, Cursor, OpenCode, LangChain, LangGraph, OpenAI Agents SDK, CrewAI, and generic MCP.
 - [Kaleidoscope package contract](https://memory.kleosresearch.xyz/docs/packages/): Public SDK facades and source-free native companions.
+- [Kaleidoscope licenses and terms](https://memory.kleosresearch.xyz/docs/legal/): Apache-2.0 public software boundary, CC BY 4.0 documentation, and review-draft engine terms.
 - [0xCopilot](https://copilot.kleosresearch.xyz/): Local-first desktop agent.
 
 ## Lab
