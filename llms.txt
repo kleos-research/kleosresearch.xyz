@@ -1,0 +1,23 @@
+# Kleos Research
+
+> Kleos is an AI research lab working on agent harnesses, local memory across tools, and measurement of what an agent actually costs.
+
+## Products
+
+- [Kaleidoscope](https://memory.kleosresearch.xyz/): Local memory for AI agents through a CLI, stdio MCP, Python, and TypeScript. The current macOS arm64 release candidate is not yet published.
+- [Kaleidoscope getting started](https://memory.kleosresearch.xyz/docs/getting-started/): Install and initialize the protected release packages.
+- [Kaleidoscope integrations](https://memory.kleosresearch.xyz/docs/integrations/): Codex, Claude, Cursor, OpenCode, LangChain, LangGraph, OpenAI Agents SDK, CrewAI, and generic MCP.
+- [Kaleidoscope package contract](https://memory.kleosresearch.xyz/docs/packages/): Public SDK facades and source-free native companions.
+- [0xCopilot](https://copilot.kleosresearch.xyz/): Local-first desktop agent.
+
+## Lab
+
+- [Research](https://kleosresearch.xyz/research/): Papers, reports, specifications, and protocols.
+- [Products](https://kleosresearch.xyz/products/): Product overview and Kaleidoscope developer preview.
+- [About](https://kleosresearch.xyz/lab/): How Kleos Research works.
+- [GitHub](https://github.com/kleos-research): Public organization repositories.
+
+## More context
+
+- [Expanded organization context](https://kleosresearch.xyz/llms-full.txt)
+- [Expanded Kaleidoscope documentation](https://memory.kleosresearch.xyz/llms-full.txt)
