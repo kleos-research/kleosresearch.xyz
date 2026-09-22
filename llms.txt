@@ -4,17 +4,17 @@
 
 ## Products
 
-- [Kaleidoscope](https://memory.kleosresearch.xyz/): Local memory for AI agents through a CLI, stdio MCP, Python, and TypeScript. The current macOS arm64 release candidate is not yet published.
-- [Kaleidoscope getting started](https://memory.kleosresearch.xyz/docs/getting-started/): Install and initialize the protected release packages.
+- [Kaleidoscope](https://memory.kleosresearch.xyz/): Local memory for AI agents through a CLI and stdio MCP. It installs from npm on macOS and Linux and needs a key to run.
+- [Kaleidoscope getting started](https://memory.kleosresearch.xyz/docs/getting-started/): Install from npm, activate your key, and give a project a memory.
 - [Kaleidoscope integrations](https://memory.kleosresearch.xyz/docs/integrations/): Codex, Claude, Cursor, OpenCode, LangChain, LangGraph, OpenAI Agents SDK, CrewAI, and generic MCP.
-- [Kaleidoscope package contract](https://memory.kleosresearch.xyz/docs/packages/): Public SDK facades and source-free native companions.
+- [Kaleidoscope install](https://memory.kleosresearch.xyz/docs/packages/): The npm package, what it puts on your disk, and what your machine needs. There is no Python package.
 - [Kaleidoscope licenses and terms](https://memory.kleosresearch.xyz/docs/legal/): Apache-2.0 public software boundary, CC BY 4.0 documentation, and review-draft engine terms.
 - [0xCopilot](https://copilot.kleosresearch.xyz/): Local-first desktop agent.
 
 ## Lab
 
 - [Research](https://kleosresearch.xyz/research/): Papers, reports, specifications, and protocols.
-- [Products](https://kleosresearch.xyz/products/): Product overview and Kaleidoscope developer preview.
+- [Products](https://kleosresearch.xyz/products/): Product overview and the Kaleidoscope install command.
 - [About](https://kleosresearch.xyz/lab/): How Kleos Research works.
 - [GitHub](https://github.com/kleos-research): Public organization repositories.
 

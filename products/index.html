@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="virtual-protocol-site-verification" content="92f94892b6d9f37d2e569bdf6ffd46b1" />
 <title>Products — Kleos</title>
-<meta name="description" content="Kleos products: 0xCopilot and Kaleidoscope, local memory for AI agents through CLI, MCP, Python, and TypeScript.">
+<meta name="description" content="Kleos products: 0xCopilot and Kaleidoscope, local memory for AI agents through a CLI and MCP.">
 <link rel="canonical" href="https://kleosresearch.xyz/products/">
 <link rel="alternate" type="text/plain" href="/llms.txt" title="Kleos Research for language models">
 <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
       "@type": "WebPage",
       "name": "Products — Kleos",
       "url": "https://kleosresearch.xyz/products/",
-      "description": "Kleos products: 0xCopilot and Kaleidoscope, local memory for AI agents through CLI, MCP, Python, and TypeScript.",
+      "description": "Kleos products: 0xCopilot and Kaleidoscope, local memory for AI agents through a CLI and MCP.",
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -43,9 +43,9 @@
       "@type": "SoftwareApplication",
       "name": "Kaleidoscope",
       "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "macOS arm64 release candidate",
+      "operatingSystem": "macOS, Linux",
       "url": "https://memory.kleosresearch.xyz/",
-      "description": "Local memory for AI agents through a CLI, two-tool stdio MCP server, Python, and TypeScript."
+      "description": "Local memory for AI agents through a CLI and a two-tool stdio MCP server."
     }
   ]
 }
@@ -223,7 +223,7 @@ footer .fbot .sp{margin-left:auto}
       </a>
       <a class="pcard" href="https://memory.kleosresearch.xyz">
         <span class="pc-n">Kaleidoscope</span>
-        <span class="pc-d">Local memory for agents through CLI, MCP, Python, and TypeScript.</span>
+        <span class="pc-d">Local memory for agents through a CLI and MCP.</span>
         <span class="pc-g">memory.kleosresearch.xyz ↗</span>
       </a>
     </div>
@@ -258,30 +258,29 @@ footer .fbot .sp{margin-left:auto}
   <section class="prod">
     <div class="top">
       <h2><a class="pname" href="https://memory.kleosresearch.xyz">Kaleidoscope&nbsp;<span class="arw">↗</span></a></h2>
-      <span class="pill dev">Release candidate</span>
+      <span class="pill dev">Early access</span>
     </div>
-    <p class="kind">local agent memory · CLI + MCP · macOS arm64 candidate</p>
-    <p class="desc">One local memory that coding agents and application frameworks can share. Kaleidoscope exposes a developer-friendly CLI, a two-tool stdio MCP server, and Python and TypeScript clients while its proprietary engine remains a source-free native binary on your machine.</p>
+    <p class="kind">local agent memory · CLI + MCP · macOS &amp; Linux</p>
+    <p class="desc">One local memory that coding agents and application frameworks can share. Kaleidoscope exposes a developer-friendly CLI and a two-tool stdio MCP server while its proprietary engine remains a source-free native binary on your machine.</p>
 
     <div class="grid">
       <div class="cell"><h3>One memory across tools</h3><p>Codex, Claude Code, Cursor, OpenCode, and application frameworks use the same local profile.</p></div>
-      <div class="cell"><h3>Built for developers</h3><p>Start with the CLI or use the Python and TypeScript clients in LangGraph, OpenAI Agents SDK, CrewAI, and other MCP hosts.</p></div>
-      <div class="cell"><h3>Local native runtime</h3><p>The manager and proprietary memory engine ship as source-free platform binaries. The memory algorithm is not copied into the SDK.</p></div>
+      <div class="cell"><h3>Built for developers</h3><p>Start with the CLI, or connect LangGraph, OpenAI Agents SDK, CrewAI, and other MCP hosts through the MCP server.</p></div>
+      <div class="cell"><h3>Local native runtime</h3><p>The proprietary memory engine ships as one source-free native binary for your platform. Its source is not in the package.</p></div>
       <div class="cell"><h3>Small agent contract</h3><p>Agents receive exactly two MCP tools: <code>search</code> and <code>remember</code>. Account and operator work stays outside the model-facing surface.</p></div>
     </div>
 
     <div class="facts">
-      <div class="fact"><p class="k">Interfaces</p><p class="v">CLI · MCP · Python · TypeScript</p></div>
-      <div class="fact"><p class="k">Native candidate</p><p class="v">macOS arm64</p></div>
-      <div class="fact"><p class="k">Status</p><p class="v">Protected RC · not published</p></div>
+      <div class="fact"><p class="k">Interfaces</p><p class="v">CLI · MCP</p></div>
+      <div class="fact"><p class="k">Platforms</p><p class="v">macOS · Linux</p></div>
+      <div class="fact"><p class="k">Status</p><p class="v">On npm · needs a key</p></div>
     </div>
 
     <div class="quickstart">
       <h3>Developer quickstart</h3>
-      <p>These are the final package names for the protected release. The registries remain closed until trusted signing, final EULA acceptance, and publication are approved.</p>
+      <p>Kaleidoscope installs from npm on macOS and Linux, on arm64 and x86_64, with Node.js 18 or newer. It needs a key to run: email <a href="mailto:contact@kleosresearch.xyz">contact@kleosresearch.xyz</a> and we will send you one. There is no Python package yet.</p>
       <div class="commands">
-        <code class="command">npm install -g @kleos-research/kaleidoscope@0.1.0-rc.1</code>
-        <code class="command">python -m pip install kaleidoscope-memory==0.1.0rc1</code>
+        <code class="command">npm install -g @kleos-research/kaleidoscope</code>
       </div>
       <div class="actions">
         <a class="go" href="https://memory.kleosresearch.xyz/docs/getting-started/">Getting started&nbsp;↗</a>
