@@ -8,16 +8,14 @@ Kaleidoscope is local memory for AI agents. It preserves accepted decisions, pre
 
 The developer surface consists of:
 
-- a `kaleidoscope` manager CLI for initialization, profiles, configuration, connection, account, and diagnostics;
 - a `kscope` native CLI and persistent stdio MCP server;
 - exactly two model-facing MCP tools: `search` and `remember`;
-- a Python package named `kaleidoscope-memory`;
 - an npm package named `@kleos-research/kaleidoscope`; and
 - integrations for Codex, Claude Code and SDK, Cursor, OpenCode, LangChain, LangGraph, OpenAI Agents SDK, CrewAI, and generic MCP clients.
 
-The public Python and TypeScript packages contain the language clients and command launchers. Platform-specific companion packages contain the public manager and proprietary engine as source-free native object code. The initial release candidate has been exercised on macOS arm64 only.
+The npm package contains the `kscope` command and a launcher that picks the binary for your platform. A platform package carries the proprietary engine as source-free native object code, built for macOS and Linux, on arm64 and x86_64. There is no Python package.
 
-The public website and documentation preview are live. The package candidates are not published: trusted signing, final EULA/legal review, registry publication, and production login deployment remain deferred release actions.
+Kaleidoscope is published on npm (`npm install -g @kleos-research/kaleidoscope`) and needs a key to run; email contact@kleosresearch.xyz for one. Nothing is signed for release yet, and the product terms are reviewed drafts that are not yet in force. The documentation's status page, https://memory.kleosresearch.xyz/status/, says what has been run and on which machines.
 
 Canonical developer resources:
 
