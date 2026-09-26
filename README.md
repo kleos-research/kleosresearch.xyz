@@ -25,9 +25,10 @@ The site is plain HTML. There is no build step and nothing to install.
 Each page is a complete document with its own styles, header and footer. To
 change the navigation, the footer or the colours, edit every page.
 
-Every page also carries a `virtual-protocol-site-verification` meta tag. It
-proves to the Virtuals Protocol listing linked in the footer that Kleos owns
-this domain, so keep it on every page.
+Every page also carries a `virtual-protocol-site-verification` meta tag. It is
+invisible to visitors and proves to an external Virtuals Protocol listing that
+Kleos owns this domain. The site no longer links to that listing; the tag stays
+so the listing's ownership check keeps passing.
 
 ## Preview it locally
 
